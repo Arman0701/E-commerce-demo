@@ -1,0 +1,35 @@
+@import "../../scss/variables.scss";
+
+.searchBlockWrapper {
+	width: 100%;
+
+	input {
+		width: calc(100% - 40px);
+		color: $base-color;
+		background: none;
+		border: none;
+		font-size: 18px;
+		margin: 5px 20px;
+		padding: 0 5px 5px 5px;
+		border: 2px solid $base-color;
+		border-top: none;
+		border-radius: 0 0 7px 7px;
+
+		&::placeholder {
+			color: $base-color;
+			font-weight: 600;
+		}
+	}
+
+	div {
+		width: 30%;
+		font-size: 18px;
+		color: crimson;
+		font-weight: 600;
+		margin: 10px auto;
+		border: 2px solid crimson;
+		text-align: center;
+		border-radius: 5px;
+		padding: 10px 0;
+	}
+}

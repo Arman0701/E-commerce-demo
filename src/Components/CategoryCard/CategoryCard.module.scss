@@ -1,0 +1,46 @@
+@import "../../scss/mixings";
+
+.cardWrapper {
+	height: 40vh;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include BP(tablet) {
+		width: 100%;
+		height: 55vh;
+	}
+
+	&:hover .cardDescription {
+		background: rgba(255, 255, 255, 0.33);
+		color: white;
+		backdrop-filter: blur(5px);
+	}
+	
+	.cardBg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.cardDescription {
+		transition: 0.15s;
+		padding: 15px;
+		font-size: 18px;
+		background: rgba(255, 255, 255, 0.53);
+		font-weight: 600;
+		width: fit-content;
+		height: fit-content;
+		text-align: center;
+
+		p {
+			margin: 5px;
+		}
+	}
+}

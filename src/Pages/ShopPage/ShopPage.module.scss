@@ -1,0 +1,65 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixings";
+
+.productsList {
+	width: 100%;
+	padding: 0 20px;
+
+	@include BP(mobile) {
+		padding: 0 10px;
+	}
+}
+.pageTitle {
+	margin-top: 20px;
+	color: $base-color;
+	text-align: center;
+}
+.paginationBlock {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 20px 0;
+
+	button {
+		width: fit-content;
+		min-width: 150px;
+		padding: 0 12px;
+		text-align: center;
+		border-radius: 4px;
+		color: $base-color;
+		border: 2px solid $base-color;
+		font-weight: 600;
+		transition: 0.33s;
+		cursor: pointer;
+		font-size: 17px;
+
+		&:hover {
+			background: $base-color;
+			color: white;
+		}
+
+		@include BP(mobile) {
+			padding: 10px 0;
+			min-width: 145px;
+		}
+	}
+
+	p {
+		color: $base-color;
+		border: 2px solid $base-color;
+		font-size: 17px;
+		width: fit-content;
+		min-width: 80px;
+		margin: 0 10px;
+		padding: 0 12px;
+		text-align: center;
+		border-radius: 4px;
+
+		@include BP(mobile) {
+			margin: 0;
+			border: none;
+			font-size: 19px;
+		}
+	}
+}

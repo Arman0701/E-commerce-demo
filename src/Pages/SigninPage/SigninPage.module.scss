@@ -1,0 +1,118 @@
+@import "../../scss/mixings";
+
+.signinPageWrapper {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+
+	@include BP(laptop) {
+		margin-top: 50px;
+		width: 95%;
+	}
+	@include BP(tablet) {
+		margin-top: 30px;
+		flex-direction: column;
+		width: 100%;
+	}
+
+    h4 {
+        margin: 10px 0;
+        font-weight: normal;
+    }
+
+    button {
+        background: none;
+        width: 100%					;
+        height: 45px;
+        cursor: pointer;
+        transition: 0.33s;
+        margin-top: 25px;
+        font-size: 17px;
+
+        &:hover {
+            color: white;
+            background: #000;
+        }
+    }
+
+    .signinForm {
+        width: 47%;
+
+		@include BP(tablet) {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+        input {
+            padding: 20px 0;
+            margin-top: 5px;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid black;
+            font-size: 17px;
+
+            &::placeholder {
+                font-size: 17px;
+                font-weight: 700;
+            }
+        }
+
+		label {
+			display: flex;
+			align-items: center;
+			border-bottom: 2px solid black;
+			margin-top: 3px;
+
+			input {
+				margin: 15px 10px 17px 0;
+				width: 16px;
+				aspect-ratio: 1/1;
+
+			}
+
+			p {
+				font-size: 17px;
+			}
+		}
+
+        .signinButtons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .signupForm {
+        width: 47%;
+
+		@include BP(tablet) {
+			width: 90%;
+			margin: 30px auto;
+		}
+
+		.error {
+			padding: 8px;
+			margin: 5px;
+			color: crimson;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+        input {
+            padding: 20px 0;
+            margin-top: 5px;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid black;
+            font-size: 17px;
+
+            &::placeholder {
+                font-size: 17px;
+                font-weight: 700;
+            }
+        }
+    }
+}

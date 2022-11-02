@@ -1,0 +1,47 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixings";
+
+.headerWrapper {
+	width: 100%;
+	padding: 0px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba($base-color, 0.88);
+	border-radius: 0 0 20px 20px;
+
+	@include BP(mobile) {
+		padding: 0;
+	}
+
+	.backButton {
+		width: 35px;
+		aspect-ratio: 1/1;
+		
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.logoWrapper {
+		display: flex;
+		justify-content: center;
+		justify-content: center;
+		overflow: hidden;
+		
+		img {
+			background-clip: padding-box;
+			cursor: pointer;
+			transform: scale(0.9);
+			width:150px;
+			
+			@include BP(tablet) {
+				width: 100px;
+			}
+			@include BP(mobile) {
+				transform: scale(0.87);
+			}
+		}
+	}
+}

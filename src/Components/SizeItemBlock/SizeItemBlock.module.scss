@@ -1,0 +1,24 @@
+@import "../../scss/mixings";
+
+.blockWrapper {
+    min-width: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: white;
+    border: 1px solid white;
+    box-shadow: rgba(white, 0.25) 0px 54px 55px,
+        rgba(white, 0.12) 0px -12px 30px, rgba(white, 0.12) 0px 4px 6px,
+        rgba(white, 0.17) 0px 12px 13px, rgba(white, 0.09) 0px -3px 5px;
+	cursor: pointer;
+
+	@include BP(mobile) {
+		width: 80%;
+		align-self: flex-start;
+		
+		& p {
+			align-content: center;
+			align-self: center;
+		}
+	}
+}

@@ -1,0 +1,245 @@
+@import "../../scss/mixings";
+@import "../../scss/variables.scss";
+
+.productItemLineWrapper {
+    width: 100%;
+	height: auto;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+
+	@include BP(tablet) {
+		flex-direction: column;
+		height: auto;
+	}
+
+    .productNumber {
+		text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+		color: white;
+		padding-right: 15px;
+		align-self: flex-start;
+
+		@include BP(tablet) {
+			display: none;
+		}
+    }
+
+    .productImageWrapper {
+		min-width: 280px;
+        max-width: 280px;
+        aspect-ratio: 1/1;
+        border: 2px solid white;
+        border-radius: 5px;
+		overflow: hidden;
+		position: relative;
+		align-self: flex-start;
+
+		@include BP(tablet) {
+			width: 100%;
+			max-width: none;
+		}
+
+        img {
+			position: absolute;
+			top: 0;
+			left: 0;
+            width: 100%;
+            height: 100%;
+			object-fit: cover;
+        }
+    }
+	.aside {
+		width: 76%;
+		height: 100%;
+		margin-left: 8px;
+		padding-right: 8px;
+		align-self: flex-start;
+
+
+		@include BP(tablet) {
+			width: 100%;
+			margin-top: 5px;
+			border-bottom: 2px solid $base-color;
+			padding: 8px 0;
+		}
+		
+		.lineTopBlock {
+			width: 100%;
+			height: 25%;
+
+			.productTitle, .productDescription {
+				width: 100%;
+				color: white;
+				font-weight: 600;
+				word-wrap: break-word;
+				font-size: 18px;
+			}
+			.productDescription {
+				margin-top: 5px;
+				font-size: 14px;
+			}
+		}
+	
+		.lineBottonBlock {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			height: 75%;
+			margin: 10px 0;
+			
+			& > * {
+				padding: 0 5px;
+			}
+			
+			.productColors,
+			.productSizes {
+				width: fit-content;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				& > p {
+					color: white;
+					margin-bottom: 5px;
+					padding-right: 5px;
+
+					@include BP(mobile) {
+						align-self: flex-start;
+					}
+				}
+				@include BP(laptop) {
+					align-content: center;
+					justify-content: flex-start;
+
+					& > * {
+						margin-bottom: 5px;
+					}
+				}
+				@include BP(tablet) {
+					& > * {
+						margin: 3px;
+					}
+				}
+				@include BP(mobile) {
+					justify-content: flex-start;
+					align-content: flex-start;
+				}
+			}
+
+			.productQuantity {
+				display: flex;
+				align-items: center;
+				color: white;
+				font-size: 20px;
+
+				@include BP(mobile) {
+					flex-direction: column-reverse;
+					justify-content: center;
+					transform: translate(-8px);
+				}
+		
+				p {
+					max-width: 35px;
+					text-align: center;
+					margin: 0 10px;
+
+					@include BP(mobile) {
+						margin: 10px 0;
+					}
+				}
+
+				button {
+					background: none;
+					cursor: pointer;
+					border: 2px solid white;
+					border-radius: 4px;
+					box-shadow: rgba(white, 0.25) 0px 54px 55px,
+						rgba(white, 0.12) 0px -12px 30px, rgba(white, 0.12) 0px 4px 6px,
+						rgba(white, 0.17) 0px 12px 13px, rgba(white, 0.09) 0px -3px 5px;
+		
+					.iconWrapper {
+						width: 35px;
+						aspect-ratio: 1/1;
+						padding: 4px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						@include BP(mobile) {
+							width: 30px;
+						}
+			
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+			}
+		
+			.productPrice {
+				color: white;
+				font-weight: 600;
+				font-size: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		
+		}
+
+	}
+	
+	.removeButton {
+		width: 1.5%;
+		max-width: 20px;
+		aspect-ratio: 1/1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		align-self: flex-start;
+
+		@include BP(tablet) {
+			width: 25px;
+			margin: 0 auto;
+			margin-top: 15px;
+			transition: 0.3s;
+			
+			&:hover {
+				border: 2px solid white;
+				border-radius: 4px;
+				padding: 4px;
+			}
+		}
+		@include BP(mobile) {
+			width: 100%;
+			border: 1px solid red;
+
+			& img {
+				width: 0px;
+				height: 0px;
+			}
+
+			&::after {
+				content: "Remove from cart";
+				color: white;
+				display: inline-block;
+				width: 100%;
+			}
+		}
+
+	
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+}

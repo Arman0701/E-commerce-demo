@@ -1,0 +1,18 @@
+@import "../../scss/mixings";
+
+.categoriesWrapper {
+    padding: 0 20px;
+
+    div {
+        width: 100%;
+        margin: 5px 0;
+        gap: 16px;
+        display: flex;
+
+		@include BP(tablet) {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+    }
+}
