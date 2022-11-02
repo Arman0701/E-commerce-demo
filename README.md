@@ -8,25 +8,25 @@
 ## Screenshots
 
 ### Home page
-![Home page screen](src\assets\project_screenshots\homepage.png)
+![Home page screen](src/assets/project_screenshots/homepage.png)
 
 ---
 ### About page
-![About page screen](src\assets\project_screenshots\aboutPage.png)
+![About page screen](src/assets/project_screenshots/aboutPage.png)
 
 ---
 ### Shop page
-![Shop page screen](src\assets\project_screenshots\shopPage.png)
+![Shop page screen](src/assets/project_screenshots/shopPage.png)
 
 ---
 ### Sign in page
-![Sign in page screen](src\assets\project_screenshots\signinPage.png)
+![Sign in page screen](src/assets/project_screenshots/signinPage.png)
 
 ---
 ### Cart page
-![Cart page screen](src\assets\project_screenshots\cartPage.png)
+![Cart page screen](src/assets/project_screenshots/cartPage.png)
 
-![Cart page screen](src\assets\project_screenshots\cartPage1.png)
+![Cart page screen](src/assets/project_screenshots/cartPage1.png)
 
 ---
 
